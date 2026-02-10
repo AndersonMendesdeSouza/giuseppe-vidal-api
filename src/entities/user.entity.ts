@@ -17,7 +17,7 @@ export class UserEntity {
   @Column({ nullable: false })
   userType: UserTypeEnum;
 
-  @Column({ nullable: true })
+  @Column({type: 'varchar', nullable: true })
   verificationCode: string | null;
 
   @Column({ type: 'timestamp', nullable: true })
