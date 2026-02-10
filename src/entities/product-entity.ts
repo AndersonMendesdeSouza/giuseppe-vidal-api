@@ -36,7 +36,7 @@ export class ProductEntity {
   @Column({ type: 'numeric', precision: 12, scale: 2, nullable: true })
   promoPrice?: string;
 
-  @Column({nullable:false})
+  @Column({ nullable: false })
   stockEnabled: boolean;
 
   @Column({ nullable: true, default: 0 })
