@@ -39,6 +39,7 @@ export class UserService {
       name: dto.name,
       email: dto.email,
       password: passwordHash,
+      userType: dto.userType,
     });
 
     const savedUser = await this.repo.save(userSave);
