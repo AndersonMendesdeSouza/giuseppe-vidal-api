@@ -7,7 +7,7 @@ export class EmailService {
 
   async sendVerificationCode(email: string, code: string) {
     await this.mailerService.sendMail({
-      to: email,
+      to: 'andersonmendesdesouza2007@gmail.com',
       subject: 'Código de verificação - Sistema da Loja',
       html: `
   <div style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 40px 0;">
@@ -22,11 +22,15 @@ export class EmailService {
     ">
       
       <h2 style="color: #8B4513; margin-bottom: 10px;">
-        Giuseppe Vidal
+      Controle de gestão - Giuseppe Vidal 
       </h2>
       
       <p style="color: #555; font-size: 16px;">
         Use o código abaixo para confirmar sua conta:
+      </p>
+
+      <p style="color: #555; font-size: 12px;">
+        Acesso pedido por: ${email}
       </p>
 
       <div style="
