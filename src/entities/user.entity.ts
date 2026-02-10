@@ -1,3 +1,4 @@
+import { UserTypeEnum } from 'src/dtos/enums/user-type.enum';
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity('user')
@@ -13,4 +14,7 @@ export class UserEntity {
 
   @Column({ nullable: false })
   password: string;
+
+  @Column({ nullable: false })
+  userType: UserTypeEnum;
 }

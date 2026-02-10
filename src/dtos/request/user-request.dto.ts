@@ -1,4 +1,5 @@
 import { IsString, IsNotEmpty, IsEmail, MinLength } from 'class-validator';
+import { UserTypeEnum } from '../enums/user-type.enum';
 
 export class UserRequestDto {
   @IsString()
@@ -12,4 +13,7 @@ export class UserRequestDto {
   @IsNotEmpty()
   @MinLength(8)
   password: string;
+
+  @IsNotEmpty()
+  userType: UserTypeEnum;
 }

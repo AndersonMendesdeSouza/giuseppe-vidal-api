@@ -1,4 +1,5 @@
 import { Expose } from 'class-transformer';
+import { UserTypeEnum } from '../enums/user-type.enum';
 
 export class UserResponseDto {
   @Expose()
@@ -9,4 +10,9 @@ export class UserResponseDto {
 
   @Expose()
   email: string;
+  
+  @Expose()
+  userType: UserTypeEnum;
+
+
 }
