@@ -6,4 +6,10 @@ export class LoginResponseDto {
 
   @Expose()
   expiresIn: number;
+
+  @Expose()
+  email: string;
+
+  @Expose()
+  requiresVerification: boolean;
 }

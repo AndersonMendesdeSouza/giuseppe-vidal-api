@@ -107,7 +107,7 @@ export class UserService {
     return `Usuario ${user.name}`;
   }
 
-  async login(dto: LoginRequestDto) {
+  async login(dto: LoginRequestDto): Promise<LoginResponseDto> {
     const user = await this.repo.findOne({ where: { email: dto.email } });
 
     if (!user) {
@@ -132,6 +132,8 @@ export class UserService {
     return {
       requiresVerification: true,
       email: user.email,
+      token:" asdasdasda",
+      expiresIn: 60,
     };
   }
 
