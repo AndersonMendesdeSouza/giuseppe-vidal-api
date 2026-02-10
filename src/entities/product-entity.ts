@@ -10,7 +10,6 @@ import {
 import { ImageEntity } from './image.entity';
 import { ProductCategoryEnum } from 'src/dtos/enums/product-category.enum';
 import { ProductStatusEnum } from 'src/dtos/enums/product-status.enum';
-import { IsEnum, IsOptional } from 'class-validator';
 
 @Entity('products')
 export class ProductEntity {
@@ -28,7 +27,6 @@ export class ProductEntity {
   @Column({ type: 'enum', enum: ProductCategoryEnum })
   category: ProductCategoryEnum;
 
-  @IsOptional()
   @Column({ type: 'enum', enum: ProductStatusEnum, nullable: true })
   isActive?: ProductStatusEnum;
 
