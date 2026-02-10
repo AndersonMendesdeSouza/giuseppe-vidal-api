@@ -130,8 +130,6 @@ export class UserService {
     await this.emailService.sendVerificationCode(user.email, code);
 
     return {
-      requiresVerification: true,
-      email: user.email,
       token:" asdasdasda",
       expiresIn: 60,
     };
